@@ -1,0 +1,78 @@
+.item {
+  position: relative;
+  display: flex;
+  gap: 15px;
+  min-height: 65px;
+  height: fit-content;
+  width: 410px;
+  flex-direction: column;
+  border-radius: 22px;
+
+  -webkit-box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2);
+  box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2);
+
+  &__header {
+    padding-top: 10px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: left;
+  }
+
+  &__description {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transform: scaleY(0.9);
+    transform-origin: top;
+    transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+
+    div {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+  }
+
+  &__description.show {
+    max-height: 300px; /* Настроить под содержимое */
+    opacity: 1;
+    transform: scaleY(1);
+  }
+
+  &__hide {
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    transform: rotate(90deg);
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: rotate(90deg) scale(1.2);
+    }
+  }
+
+  &__alt-hide {
+    transform: rotate(-90deg);
+  }
+
+  &__title {
+    padding-right: 20px;
+    font-size: 24px;
+    line-height: 125%;
+    color: #35383E;
+    font-weight: bold;
+  }
+
+  &__img {
+    padding-left: 10px;
+  }
+}
