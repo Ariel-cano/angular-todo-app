@@ -16,5 +16,18 @@ This repository contains a **ToDo application** built with **Angular 18**. The p
 - Improved CSS skills, including animations, transitions, and responsive layouts.
 - Debugged issues with components and directives to ensure smooth application flow.
 
-## Installation
+## Running the Application
+
+Follow these steps to run the Angular application locally:
+
+1. **Clone the repository** (if you haven't already):
+   git clone https://github.com/Ariel-cano/angular-todo-app.git
+2. **Navigate into the project directory**
+   cd angular-todo-app
+3. **Install the dependencies**
+   npm install
+4. **Start the development server**
+   ng serve
+5. **Open the application in your browser**: After the server has started, open your browser and go to:
+   http://localhost:4200
 
