@@ -1,27 +1,20 @@
-# AngularTodoApp
+# ToDo Application on Angular 18
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.12.
+This repository contains a **ToDo application** built with **Angular 18**. The project demonstrates modern front-end development practices and serves as a foundational example of task management applications.
 
-## Development server
+## Features
+- **Component-based architecture**: Modular and reusable components for managing tasks and groups.
+- **Two-way data binding**: Dynamic updates between the UI and application logic using Angular's powerful binding features.
+- **Responsive design**: Styled with Flexbox and custom CSS to ensure a user-friendly interface.
+- **Task states**: Includes support for tracking tasks as "In Progress" or "Done".
+- **CRUD operations**: Create, edit, delete tasks and groups seamlessly.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## What I Learned
+- Upgraded to **Angular 18** and explored new features, including updated standalone components and lifecycle hooks.
+- Implemented **two-way data binding** with `ngModel` for real-time UI updates.
+- Created reusable components to ensure maintainability and scalability.
+- Improved CSS skills, including animations, transitions, and responsive layouts.
+- Debugged issues with components and directives to ensure smooth application flow.
 
-## Code scaffolding
+## Installation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
