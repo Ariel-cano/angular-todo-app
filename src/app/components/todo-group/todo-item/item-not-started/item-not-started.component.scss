@@ -1,4 +1,41 @@
 @import "../todo-item.style.scss";
 .item{
   background-color: rgba(54, 56, 62, 0.2);
+  &__info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__meta {
+    display: flex;
+    gap: 8px;
+    font-size: 12px;
+    color: #666;
+  }
+
+  &__id {
+    color: #999;
+  }
+
+  &__creator {
+    color: #666;
+  }
+
+  &__type {
+    color: #666;
+    text-transform: uppercase;
+  }
+
+  &__dates {
+    display: flex;
+    gap: 8px;
+    font-size: 11px;
+    color: #999;
+  }
+
+  &__date {
+    display: inline-block;
+  }
 }

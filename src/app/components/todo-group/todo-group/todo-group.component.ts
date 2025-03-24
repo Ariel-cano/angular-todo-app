@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {TodoGroup, TodoItem, ToDoStatus} from '../../../interfaces/todo-group-interface';
+import {TodoGroup, TodoItem, ToDoStatus, TodoType} from '../../../interfaces/todo-group-interface';
 import {ItemDoneComponent} from '../todo-item/item-done/item-done.component';
 import {ItemNotStartedComponent} from '../todo-item/item-not-started/item-not-started.component';
 import {ItemInProgressComponent} from '../todo-item/item-in-progress/item-in-progress.component';
@@ -24,7 +24,7 @@ export class TodoGroupComponent implements OnInit{
   @Output() deleteItem = new EventEmitter<{indexItem: number, groupIndex: number}>();
 
 
-
+  public counter = 0;
   public groupTitle?: string;
 
 
@@ -49,12 +49,19 @@ export class TodoGroupComponent implements OnInit{
   }
 
   public addNewTodo(value: string){
+    this.counter++
     this.addNewItem.emit({item: {
-      status: ToDoStatus.NOT_STARTED,
-      title: value,
-      description: '',
-    },
+        status: ToDoStatus.NOT_STARTED,
+        title: value,
+        description: '',
+        id: this.counter,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        creator: '',
+        type: TodoType.TASK
+      },
   index: this.index})
+
   }
 
   public handleChangeItemDescription(value :{description: string, index : number}) {

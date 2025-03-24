@@ -15,4 +15,8 @@
     *ngFor="let group of todoGroups; let i = index;">
 
   </app-todo-group>
+  <app-todo-modal *ngIf="showModal" 
+                  (submitEvent)="handleModalSubmit($event)"
+                  (closeEvent)="handleModalClose()">
+  </app-todo-modal>
 </main>

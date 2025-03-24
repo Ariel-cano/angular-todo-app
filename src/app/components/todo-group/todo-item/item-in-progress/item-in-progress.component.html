@@ -1,7 +1,18 @@
 <div class="item">
   <div class="item__header">
-    <img src="/assets/icons/in_progress.svg" class="item__img">
-    <span class="item__title">{{todoItem.title}}</span>
+    <img src="/assets/icons/in_progress.svg" alt="done" class="item__img">
+    <div class="item__info">
+      <span class="item__title">{{todoItem.title}}</span>
+      <div class="item__meta">
+        <span class="item__id">#{{todoItem.id}}</span>
+        <span class="item__creator">Creator: {{todoItem.creator}}</span>
+        <span class="item__type">[{{todoItem.type}}]</span>
+      </div>
+      <div class="item__dates">
+        <span class="item__date">Create: {{todoItem.createdAt | date:'dd.MM.yyyy HH:mm'}}</span>
+        <span class="item__date" *ngIf="todoItem.updatedAt">Update: {{todoItem.updatedAt | date:'dd.MM.yyyy HH:mm'}}</span>
+      </div>
+    </div>
     <span
       [ngClass]="isShowDescriptions ? 'item__alt-hide' : ''"
       (click)="isShowDescriptions = !isShowDescriptions"
@@ -10,8 +21,10 @@
   <div class="item__description" [ngClass]="{'show': isShowDescriptions}">
     <textarea cols="20" rows="10" [(ngModel)]="description" class="textarea"></textarea>
     <div>
+      <button
+        class="button"
+        (click)="emitChangeStatus(todoStatus.NOT_STARTED)">Not started</button>
       <button class="button" (click)="emitChangeStatus(todoStatus.DONE)">Done</button>
-      <button class="button" (click)="emitChangeStatus(todoStatus.NOT_STARTED)">Not started</button>
       <button
         class="button"
         (click)="emitDeleteItem()">Delete</button>

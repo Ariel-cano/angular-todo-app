@@ -1,0 +1,20 @@
+<div class="modal-overlay" (click)="closeModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <h3>Creating a new task</h3>
+    <div class="form-group">
+      <label for="creator">Creator:</label>
+      <input type="text" id="creator" [(ngModel)]="creator" placeholder="write name a creator">
+    </div>
+    <div class="form-group">
+      <label for="type">Type ToDo:</label>
+      <select id="type" [(ngModel)]="type">
+        <option [value]="TodoType.TASK">TASK</option>
+        <option [value]="TodoType.BUG">BUG</option>
+      </select>
+    </div>
+    <div class="modal-actions">
+      <button (click)="submit()">Create</button>
+      <button (click)="closeModal()">Back</button>
+    </div>
+  </div>
+</div>
